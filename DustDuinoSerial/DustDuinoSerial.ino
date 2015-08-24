@@ -1,6 +1,7 @@
 //DustDuino Serial
 //By Matthew Schroyer, MentalMunition.com
 //Created 2/19/2014
+//Last updated 8/24/2015
 
 // DESCRIPTION
 // Outputs particle concentration per cubic foot and
@@ -45,11 +46,15 @@ float countP1;
 float countP2;
 
 void setup(){
+  pinMode(3, INPUT);
+  pinMode(2, INPUT);
   Serial.begin(9600);
   Serial.println("PM10 count,PM2.5 count,PM10 conc,PM2.5 conc");
 }
 
 void loop(){
+  
+  digitalWrite(7) = HIGH;
   
   valP1 = digitalRead(3);
   valP2 = digitalRead(2);
