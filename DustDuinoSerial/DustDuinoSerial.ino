@@ -54,7 +54,7 @@ void setup(){
 
 void loop(){
   
-  digitalWrite(7) = HIGH;
+  digitalWrite(7, HIGH);
   
   valP1 = digitalRead(3);
   valP2 = digitalRead(2);
